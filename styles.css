@@ -226,10 +226,10 @@ html {
     font-family: 'Arial', sans-serif;
     color: rgba(255, 255, 255, 0.8);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    transform-origin: 0 0;
+    transform-origin: 50% 50%;
 }
 
-/* Position each number individually */
+/* Position each number individually - Desktop */
 .clock-number[data-number="12"] { transform: translate(-50%, -50%) rotate(0deg) translateY(-560px) rotate(0deg); }
 .clock-number[data-number="1"] { transform: translate(-50%, -50%) rotate(30deg) translateY(-560px) rotate(-30deg); }
 .clock-number[data-number="2"] { transform: translate(-50%, -50%) rotate(60deg) translateY(-560px) rotate(-60deg); }
@@ -419,8 +419,21 @@ body::after {
 /* Mobile-specific adjustments */
 @media screen and (max-width: 768px) {
     .clock-number {
-        font-size: 24px; /* Smaller font size for mobile */
+        font-size: 24px;
     }
+
+    .clock-number[data-number="12"] { transform: translate(-50%, -50%) rotate(0deg) translateY(calc(-47vw + 10px)) rotate(0deg); }
+    .clock-number[data-number="1"] { transform: translate(-50%, -50%) rotate(30deg) translateY(calc(-47vw + 10px)) rotate(-30deg); }
+    .clock-number[data-number="2"] { transform: translate(-50%, -50%) rotate(60deg) translateY(calc(-47vw + 10px)) rotate(-60deg); }
+    .clock-number[data-number="3"] { transform: translate(-50%, -50%) rotate(90deg) translateY(calc(-47vw + 10px)) rotate(-90deg); }
+    .clock-number[data-number="4"] { transform: translate(-50%, -50%) rotate(120deg) translateY(calc(-47vw + 10px)) rotate(-120deg); }
+    .clock-number[data-number="5"] { transform: translate(-50%, -50%) rotate(150deg) translateY(calc(-47vw + 10px)) rotate(-150deg); }
+    .clock-number[data-number="6"] { transform: translate(-50%, -50%) rotate(180deg) translateY(calc(-47vw + 10px)) rotate(-180deg); }
+    .clock-number[data-number="7"] { transform: translate(-50%, -50%) rotate(210deg) translateY(calc(-47vw + 10px)) rotate(-210deg); }
+    .clock-number[data-number="8"] { transform: translate(-50%, -50%) rotate(240deg) translateY(calc(-47vw + 10px)) rotate(-240deg); }
+    .clock-number[data-number="9"] { transform: translate(-50%, -50%) rotate(270deg) translateY(calc(-47vw + 10px)) rotate(-270deg); }
+    .clock-number[data-number="10"] { transform: translate(-50%, -50%) rotate(300deg) translateY(calc(-47vw + 10px)) rotate(-300deg); }
+    .clock-number[data-number="11"] { transform: translate(-50%, -50%) rotate(330deg) translateY(calc(-47vw + 10px)) rotate(-330deg); }
 
     .track-title {
         font-size: 20px;
@@ -458,6 +471,19 @@ body::after {
     .clock-number {
         font-size: 18px;
     }
+
+    .clock-number[data-number="12"] { transform: translate(-50%, -50%) rotate(0deg) translateY(calc(-47vw + 5px)) rotate(0deg); }
+    .clock-number[data-number="1"] { transform: translate(-50%, -50%) rotate(30deg) translateY(calc(-47vw + 5px)) rotate(-30deg); }
+    .clock-number[data-number="2"] { transform: translate(-50%, -50%) rotate(60deg) translateY(calc(-47vw + 5px)) rotate(-60deg); }
+    .clock-number[data-number="3"] { transform: translate(-50%, -50%) rotate(90deg) translateY(calc(-47vw + 5px)) rotate(-90deg); }
+    .clock-number[data-number="4"] { transform: translate(-50%, -50%) rotate(120deg) translateY(calc(-47vw + 5px)) rotate(-120deg); }
+    .clock-number[data-number="5"] { transform: translate(-50%, -50%) rotate(150deg) translateY(calc(-47vw + 5px)) rotate(-150deg); }
+    .clock-number[data-number="6"] { transform: translate(-50%, -50%) rotate(180deg) translateY(calc(-47vw + 5px)) rotate(-180deg); }
+    .clock-number[data-number="7"] { transform: translate(-50%, -50%) rotate(210deg) translateY(calc(-47vw + 5px)) rotate(-210deg); }
+    .clock-number[data-number="8"] { transform: translate(-50%, -50%) rotate(240deg) translateY(calc(-47vw + 5px)) rotate(-240deg); }
+    .clock-number[data-number="9"] { transform: translate(-50%, -50%) rotate(270deg) translateY(calc(-47vw + 5px)) rotate(-270deg); }
+    .clock-number[data-number="10"] { transform: translate(-50%, -50%) rotate(300deg) translateY(calc(-47vw + 5px)) rotate(-300deg); }
+    .clock-number[data-number="11"] { transform: translate(-50%, -50%) rotate(330deg) translateY(calc(-47vw + 5px)) rotate(-330deg); }
 
     .track-title {
         font-size: 18px;
