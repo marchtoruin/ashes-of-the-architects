@@ -44,12 +44,14 @@ html {
 /* Album Cover and Glow */
 .album-cover {
     width: 400px;
+    max-width: 90vw; /* Ensure album doesn't overflow on mobile */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
     transition: all 0.3s ease-out;
     filter: none; /* Remove any filter effects */
     position: relative;
-    z-index: 2;
+    z-index: 10; /* Increase z-index to ensure it stays on top of lyrics */
     transform-style: preserve-3d; /* Enable 3D transforms */
     will-change: transform; /* Optimize performance */
     image-rendering: -webkit-optimize-contrast; /* Enhance sharpness on webkit browsers */
@@ -201,6 +203,8 @@ html {
     z-index: 0;
     transition: opacity 2s ease-out;
     opacity: 0.5;
+    max-width: 95vw;
+    max-height: 95vw;
 }
 
 .clock.fade-out {
@@ -394,6 +398,10 @@ body::after {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    width: 90%;
+    max-width: 600px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .track-title .artist {
@@ -406,4 +414,64 @@ body::after {
     font-weight: 400;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
                  0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 768px) {
+    .clock-number {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    .track-title {
+        font-size: 20px;
+        bottom: 20px;
+    }
+
+    .track-title .artist {
+        font-size: 16px;
+    }
+
+    .message {
+        font-size: 20px;
+    }
+
+    .message[class*="chorus-"] {
+        font-size: 24px;
+    }
+
+    .glitch-button {
+        width: 80px;
+        height: 80px;
+    }
+
+    .glitch-button::before {
+        border-width: 15px 0 15px 25px;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .album-cover {
+        width: 300px;
+    }
+
+    .clock-number {
+        font-size: 18px;
+    }
+
+    .track-title {
+        font-size: 18px;
+    }
+
+    .track-title .artist {
+        font-size: 14px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    .message[class*="chorus-"] {
+        font-size: 20px;
+    }
 }
