@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underwriter - Ashes of the Architects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.3.2/pixi.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="container">
+        <div class="cryptic-messages">
+            <span class="message verse-1">A reckoning carved in the bones of the earth</span>
+            <span class="message verse-2">Life reduced to scattered ash</span>
+            <span class="message verse-3">heavens crumble and bleed</span>
+            <span class="message verse-4">A void reborn from the aftermath</span>
+            <span class="message verse-5">Shadows rise to choke the fading sun</span>
+            <span class="message chorus-1">Buried alive in a sea of fire</span>
+            <span class="message chorus-2">Crawling to death's embrace</span>
+            <span class="message chorus-3">No life, no peace, no escape</span>
+            <span class="message chorus-4">All is lost, all erased</span>
+        </div>
+        <div class="clock">
+            <div class="clock-face">
+                <div class="clock-number" data-number="12">12</div>
+                <div class="clock-number" data-number="1">1</div>
+                <div class="clock-number" data-number="2">2</div>
+                <div class="clock-number" data-number="3">3</div>
+                <div class="clock-number" data-number="4">4</div>
+                <div class="clock-number" data-number="5">5</div>
+                <div class="clock-number" data-number="6">6</div>
+                <div class="clock-number" data-number="7">7</div>
+                <div class="clock-number" data-number="8">8</div>
+                <div class="clock-number" data-number="9">9</div>
+                <div class="clock-number" data-number="10">10</div>
+                <div class="clock-number" data-number="11">11</div>
+            </div>
+            <div class="clock-hands">
+                <div class="hand hour-hand"></div>
+                <div class="hand minute-hand"></div>
+                <div class="hand second-hand"></div>
+            </div>
+        </div>
+        <img src="Album_Cover.png" alt="Album Cover" class="album-cover">
+        <button id="playButton" class="glitch-button"></button>
+        <audio id="audioPlayer" src="Odin_final13.wav"></audio>
+    </div>
+    <div class="track-title">
+        Ashes of the Architects
+        <span class="artist">by Underwriter</span>
+    </div>
+    <canvas id="distortionCanvas"></canvas>
+</body>
+</html>
